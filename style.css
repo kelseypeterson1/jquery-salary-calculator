@@ -1,0 +1,29 @@
+* {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+header {
+    background-color: #659987;
+    color: white;
+    padding: 1px;
+    padding-left: 15px;
+}
+body {
+    background-color: #AEE6D2;
+}
+
+input {
+    color: gray;
+  }
+
+writing-input {
+    color: black;
+}
+
+table, th, td {
+    text-align: center;
+    padding: 3px;
+    border: 1px solid black;
+    border-spacing: 0px;
+}
