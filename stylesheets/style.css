@@ -4,13 +4,12 @@
 }
 
 header {
-    background-color: #659987;
-    color: white;
+    background-color: #9BE7CC;
     padding: 1px;
     padding-left: 15px;
 }
 body {
-    background-color: #AEE6D2;
+    background-color: #C4F1E1;
 }
 
 input {
@@ -23,12 +22,15 @@ input {
 
 table, th, td {
     text-align: center;
-    width: 1000px;
     padding: 3px;
     border: 1px solid black;
     border-spacing: 0px;
 }
 
+table {
+    width: 80%;
+}
+
 th {
-    background-color:#659987;
+    background-color: #9BE7CC;
 }
