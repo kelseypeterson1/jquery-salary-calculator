@@ -10,10 +10,9 @@ function readyNow() {
 let deleteButton = "<button class=\"deleteButton\">delete</button>"
 let totalMonthlySalary = 0;
 
-// Clicking the add employee button will trigger this function
-// It creates a new row of employee information based on inputs and creates a delete button
-// It also triggers the function to clear the inputs and refresh the monthly total
+// Add new employee's information function triggered by the "submit" button
 function addEmployee() {
+    
     let firstName = $('#firstName').val();
     let lastName = $('#lastName').val();
     let id = $('#id').val();
@@ -22,12 +21,20 @@ function addEmployee() {
     
     let monthlySalary = annualSalary / 12;
     totalMonthlySalary += monthlySalary
+    
+    // Creating alert if input fields aren't filled out
+    if (firstName === "First Name" || lastName === "Last Name" || id === "ID" || title === "Title" || annualSalary === "Annual Salary") {
+        alert("Fill out fields")
+    } else {
 
+    // Create new employee row
+    // Trigger functions to clear the inputs and refresh the monthly total
     updateTotal(totalMonthlySalary);
     $('#tableContent').append("<tr><td>" + firstName + "</td><td>" + lastName + "</td><td>" + id + "</td><td>" + title + "</td><td>" + annualSalary + "</td><td>" + deleteButton + "</td></tr>")
     refreshInputBoxes();
 
     $('.deleteButton').on('click', deleteEmployee)
+    }
 }
 
 // Empties input fields
