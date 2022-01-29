@@ -12,7 +12,7 @@ function addEmployee() {
     let title = $('#title').val();
     let annualSalary = $('#annualSalary').val();
     
-    $('#tableContent').append("<td>", firstName, "</td><td>", lastName, "</td><td>", id, "</td><td>", annualSalary, "</td><td>", title, "</td>")
+    $('#tableContent').append("<tr><td>" + firstName + "</td><td>" + lastName + "</td><td>" + id + "</td><td>" + title + "</td><td>" + annualSalary + "</td></tr>")
     refreshInputBoxes();
 }
 
