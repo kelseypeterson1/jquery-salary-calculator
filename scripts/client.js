@@ -7,7 +7,7 @@ function readyNow() {
     $('#submit').on('click', addEmployee);
 }
 
-let deleteButton = "<button class=\"deleteButton\">delete</button>"
+let deleteButton = "<b  utton class=\"deleteButton\">delete</button>"
 let totalMonthlySalary = 0;
 
 // Add new employee's information function triggered by the "submit" button
@@ -54,7 +54,7 @@ function refreshInputBoxes() {
 function deleteEmployee() {
     let annualSalary = ($(this).closest('td').prev().text());
     let monthlySalary = Number(annualSalary / 12);
-    totalMonthlySalary -= monthlySalary; // NEED TO UPDATE
+    totalMonthlySalary -= monthlySalary;
     updateTotal(totalMonthlySalary);
     $(this).parents('tr').empty();
 }

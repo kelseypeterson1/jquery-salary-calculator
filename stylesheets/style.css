@@ -8,7 +8,7 @@ header {
     padding: 1px;
     padding-left: 15px;
 }
-body {
+body, th {
     background-color: #C4F1E1;
 }
 
@@ -29,8 +29,4 @@ table, th, td {
 
 table {
     width: 80%;
-}
-
-th {
-    background-color: #9BE7CC;
 }
