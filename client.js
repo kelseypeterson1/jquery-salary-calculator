@@ -5,7 +5,7 @@ function readyNow() {
     $('#submit').on('click', addEmployee);
 }
 
-let deleteButton = "<button id=deleteButton>delete</button>"
+let deleteButton = "<button class=\"deleteButton\">delete</button>"
 let totalMonthlySalary = 0;
 
 function addEmployee() {
@@ -22,7 +22,7 @@ function addEmployee() {
     $('#tableContent').append("<tr><td>" + firstName + "</td><td>" + lastName + "</td><td>" + id + "</td><td>" + title + "</td><td>" + annualSalary + "</td><td>" + deleteButton + "</td></tr>")
     refreshInputBoxes();
 
-    $('#deleteButton').on('click', deleteEmployee)
+    $('.deleteButton').on('click', deleteEmployee)
 }
 
 function emptyInput() {
@@ -41,12 +41,12 @@ function refreshInputBoxes() {
 function deleteEmployee() {
     let annualSalary = ($(this).closest('td').prev().text());
     let monthlySalary = Number(annualSalary / 12);
-    let newTotalSalary = oldTotalSalary - monthlySalary;
-    updateTotal(newTotalSalary);
+    totalMonthlySalary -= monthlySalary; // NEED TO UPDATE
+    updateTotal(totalMonthlySalary);
     $(this).parents('tr').empty();
 }
 
 function updateTotal(monthlyTotal) {
-    monthlyTotal = Math.round(monthlyTotal);
-    $('#totalMonthly').text('Total Monthly: $' + monthlyTotal);
+    totalMonthlySalary = Math.round(monthlyTotal);
+    $('#totalMonthly').text('Total Monthly: $' + totalMonthlySalary);
 }
